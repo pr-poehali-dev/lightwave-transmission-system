@@ -1,5 +1,3 @@
-id="landmarks"
-
 const landmarks = [
   {
     name: "Собор Фёдора Ушакова",
