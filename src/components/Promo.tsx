@@ -18,20 +18,36 @@ export default function Promo() {
       <div className="fixed top-[-10vh] left-0 h-[120vh] w-full">
         <motion.div style={{ y }} className="relative w-full h-full">
           <img
-            src="/images/spiral-circles.jpg"
-            alt="Abstract spiral circles"
+            src="https://cdn.poehali.dev/projects/4757e748-751c-422f-8d39-62b244f45123/files/a68c0f0a-67a1-4d66-9203-e16ead8e95a9.jpg"
+            alt="Статистика развития Саранска"
             className="w-full h-full object-cover"
           />
+          <div className="absolute inset-0 bg-black/50" />
         </motion.div>
       </div>
 
-      <h3 className="absolute top-12 right-6 text-white uppercase z-10 text-sm md:text-base lg:text-lg">
-        Анатомия возможностей
+      <h3 className="absolute top-12 left-6 text-white uppercase z-10 text-sm md:text-base lg:text-lg tracking-widest opacity-70">
+        Цифры развития
       </h3>
 
-      <p className="absolute bottom-12 right-6 text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-5xl z-10">
-        Каждая секция — рамка для твоей истории. Формируй её, миксуй и позволь контенту
-        литься в неожиданные паттерны, заставляя листать дальше.
+      <div className="absolute inset-0 z-10 flex items-center justify-center">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-white/20 border border-white/20">
+          {[
+            { value: "330 000", label: "Жителей города" },
+            { value: "х3", label: "Рост ВРП за 20 лет" },
+            { value: "12", label: "Новых парков с 2010" },
+            { value: "86%", label: "Хотят остаться жить" },
+          ].map((item, i) => (
+            <div key={i} className="bg-black/40 backdrop-blur-sm px-8 py-10 text-center text-white">
+              <div className="text-3xl md:text-5xl font-bold mb-2">{item.value}</div>
+              <div className="text-xs uppercase tracking-widest text-neutral-300">{item.label}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <p className="absolute bottom-12 left-6 text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl max-w-xs sm:max-w-md md:max-w-lg z-10 font-light leading-tight">
+        Саранск — один из самых быстро развивающихся городов Поволжья
       </p>
     </div>
   );
